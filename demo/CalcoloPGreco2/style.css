@@ -1,0 +1,71 @@
+header {
+    background: linear-gradient(135deg, var(--accent), #f30000);
+    padding: 28px 20px;
+    text-align: center;
+    color: blue;
+    box-shadow: 0 3px 8px blue;
+  }
+
+  body > h1 {
+    position: absolute;
+    bottom: 20px;       /* Lo spinge verso il basso */
+    left: 50%;          /* Lo sposta al centro... */
+    transform: translateX(-50%); /* ...e lo centra perfettamente rispetto a se stesso */
+    width: 100%;
+    text-align: center;
+  }
+
+  #risultato{
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Courier New', Courier, monospace; /* Molto adatto per dati scientifici */
+    color: blue;
+}
+
+.slidecontainer {
+    position: fixed;
+    left: 200px;
+    width: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 20px;
+    border: 1.5px solid blue;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 255, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    z-index: 100;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.slider-label{
+    font-family: 'Courier New', monospace;
+    color: blue;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+}

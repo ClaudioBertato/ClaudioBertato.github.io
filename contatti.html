@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mio Portfolio | Home</title>
+    <title>Biografia | Chi Sono</title>
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="pages.css">
 </head>
@@ -12,34 +12,29 @@
     <header>
         <div class="header-content">
             <div class="profile-container">
-                <img src="images\profilePhoto.png" class="profilePhoto" alt="Menu Profilo">
+                <img src="https://avatars.githubusercontent.com/u/182444782?v=4" class="profilePhoto" alt="Menu Profilo">
                 <div id="dropdownMenu" class="menu-content">
                     <a href="index.html">Home</a>
                     <a href="biografia.html">Biografia</a>
                     <a href="progetti.html">I miei Progetti</a>
-                    <a href="contatti.html">Contatti</a>
+                    <a href="#contatti">Contatti</a>
                 </div>
             </div>
-            <h1>Benvenuti nel mio Sito</h1>
+            <h1>La Mia Storia</h1>
         </div>
     </header>
 
     <main class="container">
-        <section class="hero">
-            <h2>Sviluppatore Web in formazione</h2>
-            <p>Esplora il mio menu per scoprire chi sono e cosa sto realizzando.</p>
-        </section>
+
     </main>
 
     <script>
         const photo = document.querySelector('.profilePhoto');
         const menu = document.getElementById('dropdownMenu');
-
         photo.addEventListener('click', (e) => {
             e.stopPropagation();
             menu.classList.toggle('show');
         });
-
         window.onclick = () => menu.classList.remove('show');
     </script>
 </body>

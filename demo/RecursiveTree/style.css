@@ -1,0 +1,7 @@
+header {
+    background: linear-gradient(135deg, var(--accent), #f30000);
+    padding: 28px 20px;
+    text-align: center;
+    color: blue;
+    box-shadow: 0 3px 8px blue;
+  }

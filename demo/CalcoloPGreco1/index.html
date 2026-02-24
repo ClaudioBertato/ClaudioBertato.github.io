@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <header> 
+        <h1>Monte Carlo</h1>
+    </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte Carlo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="slidecontainer">
+    <p class="slider-label">Grandezza cerchi: <span id="valR">2</span></p>
+    <input type="range" min="1" max="10" value="2" class="slider" id="sliderR">
+</div>
+
+<div class="slidecontainer2">
+    <p class="slider-label">Quantità punti: <span id="valN">10000</span></p>
+    <input type="range" min="100" max="50000" step="100" value="10000" class="slider2" id="sliderN">
+</div>
+
+<canvas id="canvas" height="750" width="1900"></canvas>
+<h1 id="risultato"></h1>
+
+<script src="main.js"></script>
+
+</body>
+</html>
