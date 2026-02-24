@@ -1,0 +1,129 @@
+/* ================================
+   STYLE: Documentazione Tic Tac Toe
+   ================================ */
+
+/* --- Tema generale --- */
+:root {
+  --bg: #121212;
+  --card: #1f1f1f;
+  --accent: #2e8bff;
+  --muted: #bdbdbd;
+  --code-bg: #2b2b2b;
+  --code-color: #00ffb3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg);
+  color: #e6e6e6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, var(--accent), #111111);
+  padding: 28px 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.6px;
+}
+
+header p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+/* Main container */
+main {
+  padding: 28px 6%;
+}
+
+/* Section boxes */
+.section-box {
+  background-color: var(--card);
+  padding: 20px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.section-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.55);
+}
+
+h2 {
+  color: var(--accent);
+  margin-top: 0;
+  padding-left: 8px;
+  border-left: 4px solid var(--accent);
+  display: inline-block;
+}
+
+/* Text */
+p, li {
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+ul, ol {
+  margin: 10px 0 0 20px;
+}
+
+/* Code block */
+pre {
+  background-color: var(--code-bg);
+  color: var(--code-color);
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 12px 0 0;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.95rem;
+}
+
+/* Inline code */
+code {
+  font-family: "Consolas", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--code-color);
+}
+
+/* Footer */
+footer {
+  background-color: #0d0d0d;
+  color: #9a9a9a;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.9rem;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.4rem; }
+  main { padding: 20px; }
+  pre { font-size: 0.88rem; }
+}

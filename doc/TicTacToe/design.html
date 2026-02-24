@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documentazione – Progetto Tic Tac Toe</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Progetto Tic Tac Toe – Documentazione</h1>
+  <p>Applicazione Java con algoritmo Minimax e albero di gioco</p>
+</header>
+
+<main>
+  <section class="section-box">
+    <h2>Introduzione</h2>
+    <p>
+      Questo progetto implementa il gioco del <strong>Tris</strong> (Tic Tac Toe)
+      in linguaggio <strong>Java</strong>, applicando i concetti della teoria dei giochi.
+      L'intelligenza artificiale utilizza l'algoritmo <strong>Minimax</strong>
+      e la generazione dell'albero delle mosse per scegliere le mosse ottimali in ogni situazione.
+    </p>
+  </section>
+
+  <section class="section-box">
+    <h2>Struttura del Progetto</h2>
+    <ul>
+      <li><code>Partita</code>: coordina il gioco, genera l'albero delle mosse e invoca <strong>Minimax</strong>.</li>
+      <li><code>Tabella</code>: gestisce la griglia di gioco, le situazioni di riempimento e il controllo vittoria.</li>
+      <li><code>Casella</code>: rappresenta una singola cella della griglia.</li>
+      <li><code>Tree</code>: rappresenta le mosse possibili a partire da una situazione di gioco (<strong>root</strong>).</li>
+      <li><code>TreeNode</code>: nodo dell'albero; contiene una <code>Tabella</code> e dei figli, memorizzati in un <strong>Arraylist</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="section-box">
+    <h2>Flusso di gioco</h2>
+    <ol>
+      <li>Il computer (MIN) inizia sempre piazzando <strong>O</strong> al centro.</li>
+      <li>L'umano (MAX) effettua la propria mossa (X).</li>
+      <li>Dal tabellone corrente viene generato l'albero di tutte le mosse possibili.</li>
+      <li>Si applica l'algoritmo <strong>Minimax</strong> (eventualmente con alfa-beta) per valutare le mosse.</li>
+      <li>Il turno si alterna fino a vittoria di uno dei due o a griglia piena.</li>
+    </ol>
+  </section>
+
+  <section class="section-box">
+    <h2>Algoritmo Minimax (concetto)</h2>
+    <p>
+      Minimax valuta ricorsivamente i nodi terminali e propaga i valori verso la radice:
+      <code>+1</code> = vittoria di MAX (umano), <code>-1</code> = vittoria di MIN (computer), <code>0</code> = pareggio.
+    </p>
+    <pre><code>
+// pseudocodice semplificato
+int minimax(TreeNode nodo, boolean isMax) {
+  if (nodo è terminale) return valoreNodo;
+  if (isMax) {
+    int best = -INF;
+    for (figlio : nodo.getFigli()) best = max(best, minimax(figlio, false));
+    return best;
+  } else {
+    int best = +INF;
+    for (figlio : nodo.getFigli()) best = min(best, minimax(figlio, true));
+    return best;
+  }
+}
+    </code></pre>
+  </section>
+
+  <section class="section-box">
+    <h2>Metodo creaAlbero (panoramica)</h2>
+    <p>
+      A partire dalla configurazione corrente, per ogni casella vuota:
+      <ul>
+        <li>si controlla che la tabella non sia piena o vinta;</li>
+        <li>si crea una copia della tabella;</li>
+        <li>si inserisce il simbolo del giocatore corrente;</li>
+        <li>si aggiunge la nuova tabella come figlio del nodo corrente;</li>
+        <li>si richiama ricorsivamente la generazione sul figlio con il turno invertito.</li>
+      </ul>
+    </p>
+  </section>
+
+  <section class="section-box">
+    <h2>Conclusioni</h2>
+    <p>
+      Questo progetto è un buon esercizio di ricorsione, strutture ad albero e algoritmi decisionali.
+      Puoi estenderlo aggiungendo GUI (Java Swing), memorizzazione delle partite, o versioni più grandi del gioco.
+    </p>
+  </section>
+
+  <section class="section-box">
+  <h2>Torna alla homepage</h2>
+  <p>
+    <a href="index.html" class="btn-link">Torna alla homepage</a>
+  </p>
+</section>
+</main>
+
+<footer>
+  © 2025 – Documentazione Progetto Tic Tac Toe
+</footer>
+
+</body>
+</html>

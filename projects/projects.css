@@ -1,0 +1,92 @@
+/* --- PAGINA DETTAGLIO --- */
+.project-detail-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #7de0e4;
+    font-weight: bold;
+}
+
+.tech-stack { display: flex; gap: 10px; margin: 15px 0; }
+
+.badge {
+    background: #e0fbfc;
+    color: #2c3e50;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* --- AREA DEMO AGGIORNATA (SFONDO BIANCO) --- */
+.demo-container {
+    margin: 25px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #7de0e4; /* Il tuo bordo azzurro */
+    
+    /* Centratura perfetta */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
+    /* Colore bianco ai lati */
+    background-color: #ffffff; 
+    
+    /* Opzionale: aggiungi un po' di spazio tra l'immagine e il bordo azzurro */
+    padding: 20px; 
+}
+
+.demo-screen { 
+    max-width: 100%; /* L'immagine non uscirà mai dai bordi */
+    height: auto;    /* Mantiene le proporzioni originali */
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Un'ombra leggera per staccare il bianco dell'img dal bianco del fondo */
+}
+
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #2c3e50;
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+code a { color: inherit; font-weight: bold; }
+code a:hover { color: #007bff; text-decoration: underline; }
+
+.copy-btn {
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.copy-btn:hover {
+    background: rgba(125, 224, 228, 0.2);
+    color: #fff;
+}
+
+.copy-btn:active {
+    transform: scale(0.95);
+}
+
+/* Messaggio di conferma temporaneo */
+.copied {
+    color: #2ecc71 !important;
+}
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettagli Progetto</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="profile-container">
+                <img src="https://avatars.githubusercontent.com/u/182444782?v=4" class="profilePhoto" id="profileBtn">
+                <div id="profileMenu" class="menu-content">
+                    <a href="../index.html">Home</a>
+                    <a href="../biografia.html">Biografia</a>
+                    <a href="../progetti.html">Progetti</a>
+                </div>
+            </div>
+            <h1>Dettagli Progetto</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="project-detail-content">
+            <a href="../progetti.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Torna ai Progetti
+            </a>
+
+            <h2>Albero binario</h2>
+            
+            <div class="tech-stack">
+                <span class="badge">JavaScript</span>
+                <span class="badge">html</span>
+                <span class="badge">CSS</span>
+            </div>
+            
+            <h3>Screenshot della Demo</h3>
+            <div class="demo-container">
+                <img src="..\images\CalcoloPGreco1.png" alt="Screenshot Progetto" class="demo-screen">
+            </div>
+
+
+            <h3>Descrizione del progetto</h3>
+            <h4>Obbiettivo</h4>
+            <p></p>
+            <h4>Nozioni fondamentali</h4>
+            <p><br><br></p>
+            
+
+            <a href="https://github.com/Zuccante/4id-consegne-2025-2026-ClaudioBertato/tree/main/L009_RecursiveTree" class="btn-github">
+                <i class="fab fa-github"></i> Vedi Codice su GitHub
+            </a>
+        </div>
+    </main>
+
+    <script>
+        const profileBtn = document.getElementById('profileBtn');
+        const profileMenu = document.getElementById('profileMenu');
+        profileBtn.onclick = (e) => {
+            e.stopPropagation();
+            profileMenu.classList.toggle('show');
+        };
+        window.onclick = () => profileMenu.classList.remove('show');
+    </script>
+</body>
+</html>
