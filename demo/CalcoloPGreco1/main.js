@@ -1,5 +1,5 @@
-var canvas= document.querySelector("#canvas");
-var ctx= canvas.getContext('2d');
+const canvas= document.querySelector("#canvas");
+const ctx= canvas.getContext('2d');
 let nIn = 0;
 let n = 10000;
 let r = 2;
