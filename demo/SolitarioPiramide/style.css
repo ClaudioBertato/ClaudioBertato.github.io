@@ -1,80 +1,69 @@
-/* Layout Generale */
 body {
-    background-color: #1b5e20; /* Verde scuro tavolo */
-    margin: 0;
+    background-color: #1b5e20;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
-h1 { margin-top: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-
-/* Area di gioco */
 #game-board {
     position: relative;
     width: 800px;
-    height: 450px;
+    height: 420px;
     margin-top: 20px;
-    /* border: 1px solid rgba(255,255,255,0.1); // Opzionale per debug */
 }
 
-/* Stile delle Carte */
 .card {
-    position: absolute; /* Necessario per il posizionamento dinamico JS */
+    position: absolute;
     width: 80px;
-    height: 115px;
+    height: 112px;
     border-radius: 8px;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
-    cursor: pointer;
-    transition: transform 0.2s, filter 0.2s;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
     user-select: none;
-    background-color: white;
+    background-color: white; /* Fallback visivo */
 }
 
-/* Carte bloccate */
-.blocked {
-    filter: brightness(0.4);
-    cursor: not-allowed;
-}
-
-/* Carta selezionata */
+/* Selezione gialla */
 .selected {
     outline: 4px solid #ffeb3b;
     transform: scale(1.1) translateY(-10px) !important;
-    z-index: 100 !important;
+    z-index: 500 !important;
 }
 
-/* Interfaccia in basso */
 #ui {
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
 }
 
 .slot {
+    position: relative; /* Fondamentale per la pila */
     width: 80px;
-    height: 115px;
-    border: 2px dashed rgba(255,255,255,0.4);
+    height: 112px;
+    border: 2px dashed rgba(255,255,255,0.3);
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.slot img { width: 80px; border-radius: 8px; cursor: pointer; }
+/* Le carte dentro lo scarto si sovrappongono tutte nello stesso punto */
+#waste-slot .card {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#deck-slot img {
+    width: 80px;
+    cursor: pointer;
+}
 
 button {
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 10px 20px;
     cursor: pointer;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
-    background: #f5f5f5;
-    transition: background 0.2s;
 }
-
-button:hover { background: #fff; }
