@@ -34,7 +34,7 @@ body {
 }
 
 #ui {
-    margin-top: 40px;
+    margin-top: 80px;
     display: flex;
     gap: 40px;
     align-items: center;
@@ -50,7 +50,7 @@ body {
 
 /* Le carte dentro lo scarto si sovrappongono tutte nello stesso punto */
 #waste-slot .card {
-    top: 0;
+    top: 40;
     left: 0;
     position: absolute;
 }

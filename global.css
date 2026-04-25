@@ -142,3 +142,51 @@ code {
     letter-spacing: 1px;
     font-weight: bold;
 }
+
+/* Ridimensiona l'immagine per farla stare nell'header */
+.icon-game {
+    width: 60px;  /* Regola questa grandezza: 30px o 40px sono l'ideale */
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Allinea il link del gioco *//* Il contenitore che tiene tutto unito */
+.game-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 15px;
+    text-decoration: none;
+    
+    /* Il contorno */
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Bordo sottile e discreto */
+    border-radius: 12px;                  /* Angoli arrotondati moderni */
+    background-color: rgba(255, 255, 255, 0.2); /* Sfondo leggermente più chiaro */
+    
+    transition: all 0.3s ease;            /* Animazione per il mouse */
+}
+
+/* Effetto quando passi il mouse sopra */
+.game-link:hover {
+    border-color: #004d4d;                /* Il bordo diventa più scuro */
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);          /* Piccola elevazione */
+}
+
+/* Miglioriamo l'immagine */
+.icon-game {
+    width: 45px;  /* Dimensione bilanciata */
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+/* Formattazione del Testo */
+.game-title {
+    color: #004d4d;             /* Colore scuro e leggibile */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;           /* Grassetto deciso */
+    font-size: 15px;
+    letter-spacing: 0.5px;      /* Spaziatura tra lettere per eleganza */
+    text-transform: uppercase;  /* Opzionale: tutto maiuscolo per un look "app" */
+}
